@@ -7,18 +7,18 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     // the return variable should only have one entry
     var activeTab = tabs[0];
     var activeTabId = activeTab.id; // Fetch the id so we can redirect
-    checkIfBlocked(activeTabId, activeTab);
+    checkIfBlocked(activeTab);
 
  });
 
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    checkIfBlocked(tabId, tab);
+    checkIfBlocked(tab);
 });
 
 
 chrome.tabs.onCreated.addListener(function(tab) {         
-    checkIfBlocked(tabId, tab);
+    checkIfBlocked(tab);
  });
 
 
@@ -35,7 +35,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
 ["blocking"]);          //These url's are blocked before they're processed here.
   
 
- function checkIfBlocked(tabId, tab){
+ function checkIfBlocked(tab){
     var url = new URL(tab.url)
     console.log(url);
     var domain = url.hostname
