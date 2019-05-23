@@ -1,0 +1,10 @@
+[default]
+name=Default
+runtime=host
+config-opts=
+run-opts=
+prefix=/home/burak/.cache/gnome-builder/install/ChromeExt/host
+app-id=
+postbuild=
+prebuild=
+default=true
