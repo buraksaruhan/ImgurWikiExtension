@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Imgur and Wikipedia Bypass",
-    "description": "It is used primarily to bypass the blocking of Wikipedia and Imgur in Turkey.",
-    "version": "0.1",
+    "name": "Imgur and Pastebin Bypass",
+    "description": "It is used primarily to bypass the blocking of Imgur and Pastebin in Turkey.",
+    "version": "0.32",
     "author": "Burak Saruhan",
     "browser_action": {
         "default_icon": "icon.png",
@@ -14,7 +14,7 @@
         ]
     },
     "permissions": [
-        "tabs",
+        "activeTab",
         "http://*/*",
         "https://*/*",
         "webRequest", 
